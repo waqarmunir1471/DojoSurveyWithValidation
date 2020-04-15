@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System;
 using System.ComponentModel.DataAnnotations;
 using DojoSurveyWithValidation.Utilities;
 
@@ -17,5 +19,11 @@ namespace DojoSurveyWithValidation.Models
         
         [NoZNames]
         public string Comments {get;set;}
+
+        [DataType(DataType.Date)]
+        [Required(ErrorMessage="Date is Not Valid")]
+        [FutureDate]
+        [Display(Name="Joining Date : ")]
+        public DateTime JoiningDate{get;set;}
     }
 }

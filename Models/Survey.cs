@@ -14,7 +14,8 @@ namespace DojoSurveyWithValidation.Models
 
         [Required(ErrorMessage=" Select at Least One Option for Favorite Language")]
         public string FavLang {get;set;}
-        // [NoZNames]
+        
+        [NoZNames]
         public string Comments {get;set;}
     }
 }

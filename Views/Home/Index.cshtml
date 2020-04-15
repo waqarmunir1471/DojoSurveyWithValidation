@@ -46,7 +46,10 @@
         </select>
     </p>
     <p>
-        <label for="Comments"></label>
+        <p>
+        <span asp-validation-for="Comments" class="text-danger"></span>
+        </p>
+        <label asp-for="Comments"></label>
         <textarea asp-for="Comments"class="form-control">
 
         </textarea>
